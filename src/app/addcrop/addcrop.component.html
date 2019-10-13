@@ -1,0 +1,78 @@
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#"> Ap Crop Clusters</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto" style="margin-left:500px;">
+                  
+                    <li class="nav-item"><a class="nav-link" routerLink="/addcrop" ><span class="fa fa-upload fa-lg"> </span>Add Crop</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/vieworder" ><span class="fa fa-eye fa-lg"> </span>View orders</a></li>
+                    <li class="nav-item" ><a class="nav-link  active" routerLink="/addcrop"><span
+                      class="fa fa-user fa-lg"></span> {{username}}</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <div class="addcrop">
+<div class="container">
+  <div class="row justify-content-md-cente">
+    <div class="col-6">
+        <form class="text-center border border-light p-5" name="form" (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
+
+            <p class="h4 mb-4">Add Crop Details</p>
+        
+            <!-- Name -->
+            
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" name="name" placeholder="Name" [(ngModel)]="username" required>
+      
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" name="vill" placeholder="Village" [(ngModel)]="village" required>
+        
+            <!-- Email -->
+            <input type="number" id="defaultContactFormEmail" class="form-control mb-4" name="pin" placeholder="Pincode"  [(ngModel)]="pincode" required>
+        
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" name="crop" placeholder="Crop name" [(ngModel)]="crop" required>
+  
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" name="desc" rows="3" placeholder="Description" [(ngModel)]="cropDesc"></textarea>
+            </div>
+        
+            
+            <button class="btn btn-info" type="button" (click)="addcrop(content)">Save</button>
+        
+        </form>
+    </div>
+  </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-header" style="background-color:#233242">
+      <h4 class="modal-title" id="modal-basic-title" style="color:#ffff">Success</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true" style="font-size:16px;outline:none;color:#ffff">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Successfully saved the crop details
+   
+  </div>
+  <table style="margin-top: 50px;" class="table table-striped table-bordered table-responsive-sm" >
+      <thead class="thead-dark">
+      <tr>
+      <th>Crop name</th>
+      <th>username</th>
+      <th>Mobile</th>
+      <th>Address</th>
+      </tr>
+      </thead>
+      <tr  *ngFor="let query of orders">
+        
+        <td>{{query.crop}}</td> 
+       <td>{{query.name}}</td>
+       <td>{{query.mobile}}</td> 
+       <td>{{query.address}}</td></tr>
+  
+    </table>
+  

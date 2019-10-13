@@ -1,0 +1,24 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <div class="fadeIn first">
+      <img src="/src/assets/img/registration.png" id="icon"  alt="User Icon" />
+    </div>
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" [(ngModel)]="name" placeholder="username">
+      
+      <input type="text" id="login" class="fadeIn second" name="login"[(ngModel)]="email" placeholder="email">
+      <input type="text" id="login" class="fadeIn second" name="login" [(ngModel)]="village" placeholder="village name">
+      <input type="text" id="login" class="fadeIn second" name="login" [(ngModel)]="mobile" placeholder="mobile number">
+      <input type="text" id="password" class="fadeIn third" name="login" [(ngModel)]="password" placeholder="password">
+      <input type="text" id="password" class="fadeIn third" name="login" [(ngModel)]="passwordConf" placeholder="Repeat password">
+      <button (click)="register()" class="btn btn-primary">Create</button>
+    </form>
+    <div id="formFooter">
+      Already have an account? <a class="underlineHover" routerLink="/register">Click here</a>
+    </div>
+
+  </div>
+</div>
