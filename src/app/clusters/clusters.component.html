@@ -1,26 +1,23 @@
-
-  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-      <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand mr-auto" href="#"> Ap Crop Clusters</a>
-          <div class="collapse navbar-collapse" id="Navbar">
-              <ul class="navbar-nav mr-auto" style="margin-left:500px;">
-                
-                  <li class="nav-item"><a class="nav-link" routerLink="/clusters" ><span class="fa fa-building fa-lg"> </span>Clusters</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/crops" ><span class="fa fa-cubes fa-lg"> </span>Crops</a></li>
-                  <li class="nav-item"><a class="nav-link" routerLink="/about"><span class="fa fa-info fa-lg">  </span>
-                          About</a></li>
-                  <li class="nav-item"><a class="nav-link  active" routerLink="/search"><span
-                              class="fa fa-search fa-lg"></span> Search</a></li>
-                  <li class="nav-item" ><a class="nav-link  active" routerLink="/search"><span
-                    class="fa fa-user fa-lg"></span> {{username}}</a></li>
-              </ul>
-             
-          </div>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+  <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand mr-auto" href="#"> Ap Crop Clusters</a>
+      <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto" style="margin-left:500px;">
+            
+              <li class="nav-item"><a class="nav-link" routerLink="/clusters" ><span class="fa fa-building fa-lg"> </span>Clusters</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/crops" ><span class="fa fa-cubes fa-lg"> </span>Crops</a></li>
+              <li class="nav-item"><a class="nav-link  active" routerLink="/search"><span
+                          class="fa fa-search fa-lg"></span> Search</a></li>
+                          <li class="nav-item" ><a class="nav-link"  (click)="logout()"><span
+                            class="fa fa-user fa-lg"></span> {{username}} <span class="fa fa-power-off"></span></a></li>
+                      </ul>
+         
       </div>
-  </nav>
+  </div>
+</nav>
 <div class="clusters">
   
 <br><br>

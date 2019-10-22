@@ -261,3 +261,16 @@ html {
     width:30%;
   }
   
+.body{
+  background-image: url('https://d2v9ipibika81v.cloudfront.net/uploads/sites/104/Agriculture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
+  text-align: center;
+  text-shadow: 2px 1px black;
+}
+

@@ -55,6 +55,11 @@ export class SearchComponent implements OnInit {
     console.log(bookcrop);
   }
   
+  logout(){
+    
+    localStorage.removeItem("isLoggedIn");
+    this.router.navigateByUrl('/login')
+    }
   crops(){
 
     var query={

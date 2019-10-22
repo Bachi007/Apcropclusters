@@ -64,3 +64,9 @@
     height: 1000px;
     
   }
+  
+  .body{
+    background-image: url('https://nzfarmsource.co.nz/assets/ContentPages/Images/HeroImages/my-connect-test2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

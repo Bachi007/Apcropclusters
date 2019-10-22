@@ -36,6 +36,12 @@ export class AddcropComponent implements OnInit {
       }
     })
   }
+  
+  logout(){
+    
+    localStorage.removeItem("isLoggedIn");
+    this.router.navigateByUrl('/login')
+    }
   vieworder(content){
     
     this.admin=JSON.parse(localStorage.getItem('isLoggedIn')); 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ViewcropService } from '../service/viewcrop.service';
 import swal from 'sweetalert';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-crops',
   templateUrl: './crops.component.html',
@@ -15,7 +16,7 @@ export class CropsComponent implements OnInit {
   query: any;
   modalRef: any;
   getDismissReason: any;
-  constructor(private modalService: NgbModal,private view:ViewcropService) { }
+  constructor(private modalService: NgbModal,private view:ViewcropService,private router:Router) { }
   
   order(content,query){
     this.query=query
@@ -63,6 +64,11 @@ export class CropsComponent implements OnInit {
           console.log(res);
           this.details=res;
         })
+  }
+  logout(){
+    
+  localStorage.removeItem("isLoggedIn");
+  this.router.navigateByUrl('/login')
   }
   user=JSON.parse(localStorage.getItem('isLoggedIn'));
   username=this.user.name;

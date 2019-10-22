@@ -1,4 +1,4 @@
-
+<div class="body">
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -10,9 +10,9 @@
                   
                     <li class="nav-item"><a class="nav-link" routerLink="/addcrop" ><span class="fa fa-upload fa-lg"> </span>Add Crop</a></li>
                   <li class="nav-item"><a class="nav-link" routerLink="/vieworder" ><span class="fa fa-eye fa-lg"> </span>View orders</a></li>
-                    <li class="nav-item" ><a class="nav-link  active" routerLink="/addcrop"><span
-                      class="fa fa-user fa-lg"></span> {{username}}</a></li>
-                </ul>
+                  <li class="nav-item" ><a class="nav-link"  (click)="logout()"><span
+                    class="fa fa-user fa-lg"></span> {{username}} <span class="fa fa-power-off"></span></a></li>
+              </ul>
                
             </div>
         </div>
